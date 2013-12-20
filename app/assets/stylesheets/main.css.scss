@@ -1,0 +1,130 @@
+$maxwidth: 1400px;
+$grey: #303030;
+$red: #984737;
+$green: #5f8b60;
+
+* {
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+html {
+	padding-top: 50px;
+}
+
+h1 {
+	color: lighten($grey, 66%);
+	font-size: 80px !important; font-weight: 300;
+	border-bottom: solid 2px #eee;
+	padding-bottom: 25px;
+}
+
+a {
+	text-decoration: none;
+	color: $green;
+}
+
+form {
+	input {
+		margin: 10px 0px;
+	}
+	textarea {
+		margin: 10px 0px;
+	}
+}
+.section {
+	width: 100%; height: 500px;
+	background: $green;
+}
+
+.create_new {
+	background: $green;
+	color: #fff;
+	padding: 20px;
+	box-shadow: 3px 3px 0px darken($green, 10%);
+	border-radius: 5px;
+	font-size: 20px;
+	&:hover{
+		background: darken($green, 10%);
+		box-shadow: 3px 3px 0px darken($green, 15%);
+	}
+
+}
+
+
+.edit {
+	background: $green;
+	color: #fff;
+	padding: 15px;
+	box-shadow: 3px 3px 0px darken($green, 10%);
+	border-radius: 5px;
+	line-height: 60px;
+	&:hover{
+		background: darken($green, 10%);
+		box-shadow: 3px 3px 0px darken($green, 15%);
+	}
+
+}
+
+.delete {
+	background: $red !important;
+	color: #fff;
+	padding: 15px;
+	border-radius: 5px;
+	line-height: 60px;
+	box-shadow: 3px 3px 0px darken($red, 10%) !important;
+	&:hover{
+		background: darken($red, 10%) !important;
+		box-shadow: 3px 3px 0px darken($red, 15%) !important;
+	}
+}
+
+.status {
+	padding: 20px;
+	background: #eee;
+	&:nth(even) {
+		background: #fff;
+	}
+}
+
+.container {
+	position: relative;
+	margin: auto;
+	width: 100%; max-width: $maxwidth;
+	padding: 20px;
+}
+
+#navbar {
+	background: $grey;
+	position: fixed; 
+	top: 0; left: 0;
+	z-index: 1000;
+	width: 100%; height: 60px;
+	&:after {clear: both; display: table; content: "";}
+	#logo {
+		float: left;
+		height: 60px;
+		padding: 10px;
+		top: 0;
+		position: absolute
+	}
+	ul {
+		padding: 0px;
+		height: auto;
+		position: absolute;
+		right: 0px; top: 0;
+		li {
+			display: inline-block;
+			list-style: none;
+			padding: 0px;
+			 a {
+			 	padding: 10px 10px;
+			 	color: #fff;
+			 	&:hover {
+					background: darken($grey, 10%);
+			 	}
+			 }
+		}
+	}
+}
