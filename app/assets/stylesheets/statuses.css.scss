@@ -1,3 +1,14 @@
 // Place all the styles related to the statuses controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.status {
+	padding: 20px;
+	border-bottom: solid 2px #eee;
+}
+
+.name {
+	font-size: 24px;
+	letter-spacing: 4px;
+	text-transform: uppercase;
+}
