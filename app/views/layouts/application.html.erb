@@ -17,16 +17,23 @@
 		<div id="toolbox-tab"></div>
 		<div id="toolbox">
 			<div id="dashboard">
-				<h3 class="welcome-msg">Welcome back, Tedd.</h3>
-				<%= link_to 'Create a New Status', new_status_path, class: "create_new" %>
-
+				<h3 class="welcome-msg">Happy Saturday, Tedd.</h3>
 			</div>
+			<%= link_to 'Create a New Status', new_status_path, class: "create_new" %>
+			<%= link_to 'Login', new_user_session_path, class: "blue button" %>
 		</div>
 	</div>
 </div>
 
-	<%= yield %>
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
 
+<div class="section">
+  <h3>Welcome to the Spring.</h3>
+</div>
+<div class="container">
+	<%= yield %>
+</div>
 
 </body>
 </html>

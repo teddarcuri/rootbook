@@ -2,6 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+$green: #5f8b60;
+
 .status {
 	padding: 20px;
 	border-bottom: solid 2px #eee;
@@ -11,4 +13,11 @@
 	font-size: 24px;
 	letter-spacing: 4px;
 	text-transform: uppercase;
+}	
+
+#notice {
+	background: $green;
+	color: #fff; 
+	font-size: 30px;
+	padding: 10px; text-align: center;
 }
