@@ -34,13 +34,14 @@ h2 {
 h3 {
 	color: darken($grey, 66%);
 	font-size: 33px !important;
-	padding: 15px 0px !important;
+	padding: 0px 0px !important;
+	margin: 15px 0px !important;
 }
 
 h4 {
 	color: lighten($grey, 30%);
-	font-size: 20px !important;
-	letter-spacing: 3px;
+	font-size: 16px !important;
+	letter-spacing: 2px;
 	font-style: italic !important;	
 	padding: 15px 0px !important;
 }
@@ -96,35 +97,32 @@ p {
 .blue {
 	background: $blue;
 	color: #fff;
-	box-shadow: 3px 3px 0px darken($blue, 10%);
+	box-shadow: 0px 3px 0px darken($blue, 10%);
 	&:hover{
 		background: darken($blue, 10%);
-		box-shadow: 3px 3px 0px darken($blue, 15%);
+		box-shadow: 0px 3px 0px darken($blue, 15%);
 	}
 }
 
 .green {
 	background: $green;
 	color: #fff;
-	box-shadow: 3px 3px 0px darken($green, 10%);
+	box-shadow: 0px 3px 0px darken($green, 10%);
 	&:hover{
 		background: darken($green, 10%);
-		box-shadow: 3px 3px 0px darken($green, 15%);
+		box-shadow: 0px 3px 0px darken($green, 15%);
 	}
 }
 
 .red {
 	background: $red !important;
 	color: #fff;
-	box-shadow: 3px 3px 0px darken($red, 10%) !important;
+	box-shadow: 0px 3px 0px darken($red, 10%) !important;
 	&:hover{
 		background: darken($red, 10%) !important;
-		box-shadow: 3px 3px 0px darken($red, 15%) !important;
+		box-shadow: 0px 3px 0px darken($red, 15%) !important;
 	}
 }
-
-
-
 
 .container {
 	position: relative;
@@ -146,9 +144,9 @@ p {
 	&:after {clear: both; display: table; content: "";}
 	#logo {
 		float: left;
-		height: 60px;
+		height: 32px;
 		padding: 9px;
-		top: 0;
+		top: 13px;
 		position: absolute
 	}
 	ul {

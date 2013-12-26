@@ -8,7 +8,7 @@
       <% @statuses.each do |status| %>
 
         <div class="status">
-          
+        <%= image_tag status.user.gravatar_url %>
          <h3><%= status.user.full_name  %></h3>
           <p><%= status.content %><p><br />
 
@@ -25,7 +25,7 @@
     <% else %>
       <center>
         <h1>Welcome to the spring.</h1>
-        <h4>Please Log In to continue</h4>
+        <h4>Please Log In or Register to continue</h4>
       </center>
     <% end %>
 
