@@ -1,8 +1,5 @@
 $(document).ready(function(){
-
-	$("#toolbox-tab").click(function(){
+	$("#toolbox-container").click(function(){
 		$("#toolbox").fadeToggle();
 	})
-	
-
 });

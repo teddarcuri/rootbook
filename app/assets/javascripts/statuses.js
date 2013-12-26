@@ -1,9 +1,10 @@
 
+$(document).ready(function(){
+	$(".notice").delay(5000).slideUp();
+});
 
 $(document).ready(function(){
-
-	$("#notice").hide();
-
-	$("#notice").fadeIn().delay(5000).fadeOut();
-
+	$(".status").hover(function(){
+		$(this).toggleClass("hover")
+	});
 });

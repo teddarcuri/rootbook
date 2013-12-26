@@ -7,6 +7,27 @@ $green: #5f8b60;
 .status {
 	padding: 20px;
 	border-bottom: solid 2px #eee;
+	position: relative;
+	width: 100%; max-width: 1000px;
+	margin: auto;
+	border-radius: 10px;
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+	&:hover {
+		background: #eee;
+		box-shadow: 3px 3px 0px darken(#eee, 15%) !important;
+	}
+	&:hover .admin {
+		display: inline-block;
+	}
+	.admin {
+		display: none;
+		position: absolute;
+		bottom: 0px; right: 0px;
+	}
 }
 
 .name {

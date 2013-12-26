@@ -1,12 +1,9 @@
 <div class="container">
 	<div class="statuses">
-		<p id="notice"><%= notice %></p>
-
 		<p>
 		  <b>Name:</b>
-		  <%= @status.name %>
+		  <h3><%= @status.user.full_name %></h3>
 		</p>
-
 		<p>
 		  <b>Content:</b>
 		  <%= @status.content %>

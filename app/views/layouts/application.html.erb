@@ -14,13 +14,27 @@
 <div id="navbar">
 	<div class="container">
 		<%= link_to(image_tag("logo.svg", :id => "logo"), statuses_path) %>
-		<div id="toolbox-tab"></div>
-		<div id="toolbox">
-			<div id="dashboard">
-				<h3 class="welcome-msg">Happy Saturday, Tedd.</h3>
-			</div>
-			<%= link_to 'Create a New Status', new_status_path, class: "create_new" %>
-			<%= link_to 'Login', new_user_session_path, class: "blue button" %>
+		<!-- TOOLBOX --> 
+		<div id="toolbox-container">
+			<div id="toolbox-tab"></div>
+			<div id="toolbox">
+				<div id="dashboard">
+					<% if user_signed_in? %>
+						<h3 class="welcome-msg">Welcome, <%= link_to  current_user.first_name, edit_user_registration_path %></h3>
+					<% else %>
+						<h3 class="welcome-msg">Please Log In</h3>
+					<% end %>
+				</div><!-- End Dashboard -->
+				<div id="control-panel">
+					<% if user_signed_in? %>
+						<%= link_to 'New Project', new_status_path, class: "green button" %>
+						<%= link_to('Logout', destroy_user_session_path, :method => :delete, class: "red button") %>
+					<% else %>
+						<%= link_to 'Log in', new_user_session_path, class: "blue button" %>
+						<%= link_to('Register', new_user_registration_path, class: "blue button") %>
+					<% end %>
+				</div><!-- End Control Panel -->
+			</div><!-- End Toolbox -->
 		</div>
 	</div>
 </div>
@@ -29,8 +43,8 @@
 <p class="alert"><%= alert %></p>
 
 <div class="section">
-  <h3>Welcome to the Spring.</h3>
 </div>
+
 <div class="container">
 	<%= yield %>
 </div>
