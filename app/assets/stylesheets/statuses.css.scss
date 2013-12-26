@@ -3,6 +3,48 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 $green: #5f8b60;
+$grey: #303030;
+
+#statuses {
+	width: 60%; height: auto;
+	float: left;
+	&:after {
+		display: table;
+		clear: both;
+		content: "";
+	}
+}
+
+#sidebar {
+	width: 30%; height: 1000px;
+	border-radius: 10px;
+	background: lighten($grey, 75%);
+	float: right;
+	&:after {
+		display: table;
+		clear: both;
+		content: "";
+	}
+
+	li {
+		list-style: none;
+		border-bottom: solid 2px #ddd;
+		a{
+			color: #bbb !important;
+			padding: 20px;
+			display: block;	
+			font-size: 24px;
+			border-radius: 0px;
+			&:hover {
+				color: #eee !important;
+				background: #666;
+			}
+			&:nth-child(1) {
+				border-radius: 10px 10px 0px 0px;
+			}
+		}
+	}
+}
 
 .status {
 	padding: 20px;
@@ -30,7 +72,9 @@ $green: #5f8b60;
 	}
 	img {
 		border-radius: 200%;
-		height: 50px;
+		height: 90px;
+		float: left;
+		margin: 20px 40px 20px 0px;
 	}
 }
 
