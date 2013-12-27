@@ -220,6 +220,12 @@ p {
 		width: 100%; height: auto;
 		background: darken($grey, 10%);
 		padding: 7px 20px;
+		img {
+			width: 60px;
+			border-radius: 200%;
+			float: left;
+			margin: 10px 15px 10px 0px;
+		}
 		.welcome-msg {
 			color: #fff;
 			font-size: 25px !important;

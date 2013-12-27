@@ -20,6 +20,7 @@
 			<div id="toolbox">
 				<div id="dashboard">
 					<% if user_signed_in? %>
+					<%= image_tag current_user.gravatar_url %>
 						<h3 class="welcome-msg">Welcome, <%= link_to  current_user.first_name, edit_user_registration_path %></h3>
 					<% else %>
 						<h3 class="welcome-msg">Please Log In</h3>
@@ -27,7 +28,7 @@
 				</div><!-- End Dashboard -->
 				<div id="control-panel">
 					<% if user_signed_in? %>
-						<%= link_to 'My Projects', new_status_path, class: "green button" %>
+						<%= link_to 'New Status', new_status_path, class: "green button" %>
 						<%= link_to('Logout', logout_path, class: "red button") %>
 					<% else %>
 						<%= link_to 'Log in', login_path, class: "blue button" %>
