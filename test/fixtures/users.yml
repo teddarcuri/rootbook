@@ -3,3 +3,9 @@ tedd:
   last_name: "Arcuri"
   email: "tarcuri88@gmail.com"
   profile_name: "teddarcuri"
+
+cody:
+  first_name: "Cody"
+  last_name: "Rust"
+  email: "cody@rootspringstudios.com"
+  profile_name: "codyrust"
