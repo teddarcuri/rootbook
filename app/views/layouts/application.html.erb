@@ -39,12 +39,18 @@
 	</div>
 </div>
 
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+<!-- Notifications -->
+<% flash.each do |type, message| %>
+	<div class="alert <%= flash_class type %>">
+			<%= message %>
+	</div>
+<% end %>
 
+<!-- Header Section -->
 <div class="section">
 </div>
 
+<!-- Main Content -->
 <div class="container">
 	<%= yield %>
 </div>

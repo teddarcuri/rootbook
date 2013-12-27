@@ -1,6 +1,6 @@
 
 $(document).ready(function(){
-	$(".notice").delay(5000).slideUp();
+	$(".alert").delay(5000).slideUp();
 });
 
 $(document).ready(function(){

@@ -31,14 +31,17 @@ $grey: #303030;
 		list-style: none;
 		display: inline-block;
 		a{
-			color: #bbb !important;
+			color: #aaa !important;
 			padding: 20px;
 			display: inline-block;	
-			font-size: 24px;
+			font-size: 18px;
 			border-radius: 10px;
 			&:hover {
 				color: #fff	!important;
 				background: #ccc;
+			}
+			&:active {
+				background: $green;
 			}
 		}
 	}

@@ -1,34 +1,35 @@
-  <div class="statuses">
+<div class="statuses">
 
-    <% if user_signed_in? %>
-      <h1>All Statuses</h1><br />
-      <div id="status-links">
-        <li><%= link_to '+ Add a New Status', new_status_path%></li>
-      </div>
-    <% else %>
-    <center>
-        <h1>Welcome to the spring.</h1>
-        <h4>Please Log In or Register to continue</h4>
-      </center>
-    <% end %>
-      
-      <div id="statuses">
-        <% @statuses.each do |status|  %>
-            <div class="status">
-            <%= image_tag status.user.gravatar_url %>
-             <h3><%= status.user.full_name  %></h3>
-              <p><%= status.content %><p><br />
+  <% if user_signed_in? %>
 
-                <div class="meta">
-                  <%= link_to "Posted " + time_ago_in_words(status.created_at) + " ago", status, :class => "post-time" %><br />
-                  <span class="admin">
-                   <%= link_to "Edit", edit_status_path(status), class: "green button" %>
-                   <%= link_to "Delete", status, method: :delete, data: { confirm: "You sure?"}, class: "red button" %>
-                  </span>
-                </div>
-            </div>
-            <br />
-        <% end %><!-- End Status Loop -->
-       </div><!-- End Statuses -->
+    <h1>All Statuses</h1><br />
+    <div id="status-links">
+      <li><%= link_to '+ Add a New Status', new_status_path%></li>
+    </div>
 
-  </div><!-- End Statuses -->
+    <div id="statuses">
+      <% @statuses.each do |status|  %>
+          <div class="status">
+          <%= image_tag status.user.gravatar_url %>
+           <h3><%= status.user.full_name  %></h3>
+            <p><%= status.content %><p><br />
+
+              <div class="meta">
+                <%= link_to "Posted " + time_ago_in_words(status.created_at) + " ago", status, :class => "post-time" %><br />
+                <span class="admin">
+                 <%= link_to "Edit", edit_status_path(status), class: "green button" %>
+                 <%= link_to "Delete", status, method: :delete, data: { confirm: "You sure?"}, class: "red button" %>
+                </span>
+              </div>
+          </div>
+          <br />
+      <% end %><!-- End Status Loop -->
+     </div><!-- End Statuses -->
+  <% else %>
+
+  <center>
+    <h1>Welcome to the spring.</h1>
+    <h4>Please <%= link_to 'Log in', new_user_session_path %> or <%= link_to 'Register', new_user_registration_path %> to continue</h4>
+   </center>
+  <% end %>
+</div><!-- End Statuses -->
