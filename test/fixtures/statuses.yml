@@ -2,6 +2,8 @@
 
 one:
   content: MyText
+  user: tedd
 
 two:
   content: MyText
+  user: tedd
