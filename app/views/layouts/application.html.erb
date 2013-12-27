@@ -13,7 +13,7 @@
 
 <div id="navbar">
 	<div class="container">
-		<%= link_to(image_tag("logo.svg", :id => "logo"), statuses_path) %>
+		<%= link_to(image_tag("logo.svg", :id => "logo"), feed_path) %>
 		<!-- TOOLBOX --> 
 		<div id="toolbox-container">
 			<div id="toolbox-tab"></div>
@@ -28,10 +28,10 @@
 				<div id="control-panel">
 					<% if user_signed_in? %>
 						<%= link_to 'My Projects', new_status_path, class: "green button" %>
-						<%= link_to('Logout', destroy_user_session_path, :method => :delete, class: "red button") %>
+						<%= link_to('Logout', logout_path, class: "red button") %>
 					<% else %>
-						<%= link_to 'Log in', new_user_session_path, class: "blue button" %>
-						<%= link_to('Register', new_user_registration_path, class: "blue button") %>
+						<%= link_to 'Log in', login_path, class: "blue button" %>
+						<%= link_to('Register', register_path, class: "blue button") %>
 					<% end %>
 				</div><!-- End Control Panel -->
 			</div><!-- End Toolbox -->
