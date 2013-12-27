@@ -27,7 +27,7 @@
 				</div><!-- End Dashboard -->
 				<div id="control-panel">
 					<% if user_signed_in? %>
-						<%= link_to 'New Project', new_status_path, class: "green button" %>
+						<%= link_to 'My Projects', new_status_path, class: "green button" %>
 						<%= link_to('Logout', destroy_user_session_path, :method => :delete, class: "red button") %>
 					<% else %>
 						<%= link_to 'Log in', new_user_session_path, class: "blue button" %>

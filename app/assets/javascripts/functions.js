@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	$("#toolbox-container").click(function(){
-		$("#toolbox").slideToggle();
+		$("#toolbox").fadeToggle();
 	})
 });
 
